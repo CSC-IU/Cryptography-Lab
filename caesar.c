@@ -20,7 +20,7 @@ int main(int argc, char* argv[]){
 	}
 	int key = atoi(argv[3]) % 26;
 	
-	char message[100], ch;
+	char message[150], ch;
 	strncpy(message, argv[2], 100);
 	int i;
 	
@@ -33,6 +33,7 @@ int main(int argc, char* argv[]){
 			
 				if(ch > 'z'){
 					ch = ch - 'z' + 'a' - 1;
+					printf("ch: %d\n", ch);
 				}
 			
 				message[i] = ch;
