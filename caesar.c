@@ -18,7 +18,7 @@ int main(int argc, char* argv[]){
 		printf("Arg2 error --> Input message too long, max 100 characters\n");
 		return 1;
 	}
-	int key = atoi(argv[3]) % 26;
+	int key = abs(atoi(argv[3])) % 26;
 	
 	char message[150], ch;
 	strncpy(message, argv[2], 100);
