@@ -27,24 +27,13 @@ int main(int argc, char* argv[]){
 	if(strncmp(argv[1], "e", 1) == 0){
 		for(i = 0; message[i] != '\0'; ++i){
 			ch = message[i];
-		
-			if(ch >= 'a' && ch <= 'z'){
-				ch = ch + key;
-				printf("key: %d\n",key);
-				printf("ch: %d\n", ch);
-				if(ch > 'z'){
-					ch = (char)(ch - 'z' + 'a' - 1);
-				}
 			
+			if(ch >= 'a' && ch <= 'z'){
+				ch = 97+((ch+key)-97) % (123-97);
 				message[i] = ch;
 			}
 			else if(ch >= 'A' && ch <= 'Z'){
-				ch = ch + key;
-			
-				if(ch > 'Z'){
-					ch = (char)(ch - 'Z' + 'A' - 1);
-				}
-			
+				ch = 65+((ch+key)-65) % (91-65);
 				message[i] = ch;
 			}
 		}
