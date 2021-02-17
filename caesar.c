@@ -21,7 +21,7 @@ int main(int argc, char* argv[]){
 	int key = atoi(argv[3]) % 26;
 	
 	char message[100], ch;
-	strncpy(argv[2], message, 100);
+	strncpy(message, argv[2], 100);
 	int i;
 	
 	if(strncmp(argv[1], "e", 1) == 0){
