@@ -30,7 +30,7 @@ int main(int argc, char* argv[]){
 		
 			if(ch >= 'a' && ch <= 'z'){
 				ch = ch + key;
-			
+				printf("key: %d\n",key);
 				if(ch > 'z'){
 					ch = ch - 'z' + 'a' - 1;
 					printf("ch: %d\n", ch);
