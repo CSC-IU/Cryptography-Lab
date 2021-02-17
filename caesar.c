@@ -31,9 +31,9 @@ int main(int argc, char* argv[]){
 			if(ch >= 'a' && ch <= 'z'){
 				ch = ch + key;
 				printf("key: %d\n",key);
+				printf("ch: %d\n", ch);
 				if(ch > 'z'){
-					ch = ch - 'z' + 'a' - 1;
-					printf("ch: %d\n", ch);
+					ch = char(ch - 'z' + 'a' - 1);
 				}
 			
 				message[i] = ch;
@@ -42,7 +42,7 @@ int main(int argc, char* argv[]){
 				ch = ch + key;
 			
 				if(ch > 'Z'){
-					ch = ch - 'Z' + 'A' - 1;
+					ch = char(ch - 'Z' + 'A' - 1);
 				}
 			
 				message[i] = ch;
