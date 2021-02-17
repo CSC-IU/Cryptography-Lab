@@ -11,7 +11,7 @@ int main(int argc, char* argv[]){
 		return 1;
 	}
 	else if(strncmp(argv[1], "e", 1) != 0 || strncmp(argv[1], "d", 1) != 0){
-		prinf("Arg1 error --> [mode]: 'e' for encrypt or 'd' for decrypt\n");
+		printf("Arg1 error --> [mode]: 'e' for encrypt or 'd' for decrypt\n");
 		return 1;
 	}
 	else if(strlen(argv[2]) > 100){
